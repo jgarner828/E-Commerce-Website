@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
   // be sure to include its associated Products
   try {
 
-    let allCategories = await Category.findAll({include: [{ model: Product }],});
+    const allCategories = await Category.findAll({include: [{ model: Product }],});
     res.status(200).json(allCategories)
 
   } catch (err) {
@@ -21,7 +21,7 @@ router.get('/:id', async (req, res) => {
   // be sure to include its associated Products
   try {
 
-    let categoryById = await Category.findByPk(req.params.id, {include: [{ model: Product }],});
+    const categoryById = await Category.findByPk(req.params.id, {include: [{ model: Product }],});
     res.status(200).json(categoryById);
 
   } catch (err) {
@@ -32,7 +32,9 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   // create a new category
   try {
-
+    const newCategory = await Category.create({category_name: req.body.category_name})
+    res.status(200).json(newCategory);
+    
   } catch (err) {
     res.status(500).json(err);
   }
