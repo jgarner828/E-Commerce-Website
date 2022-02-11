@@ -12,6 +12,12 @@
 
   **install dependencies. run 'npm start' in terminal.**
   
+  
+
+https://user-images.githubusercontent.com/90808889/153664365-1b870b7f-d031-4e52-90fb-79aae247ece5.mp4
+
+
+  
   # License
   
   ### [MIT License Link](https://opensource.org/licenses/MIT)
